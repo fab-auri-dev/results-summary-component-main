@@ -44,8 +44,6 @@
 * {
     margin: 0;
     padding: 0;
-
-    transition: .5s ease-in-out;
 }
 body {
     height: 100vh;
@@ -98,6 +96,8 @@ button {
     border-radius: 50%;
     aspect-ratio: 1 / 1;
     margin: 2.5rem auto;
+
+    transition: .5s ease-in-out;
 
     display: flex;
     flex-direction: column;
