@@ -1,0 +1,332 @@
+/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+@font-face {
+  font-family: 'HankenGrotesk variableFont';
+  src: url( './assets/fonts/HankenGrotesk-VariableFont_wght.ttf' ) format( 'woff2' );
+}
+@font-face {
+    font-family: 'HankenGrotesk medium';
+    src: url( './assets/fonts/static/HankenGrotesk-Medium.ttf' ) format( 'woff2' );
+}
+@font-face {
+    font-family: 'HankenGrotesk bold';
+    src: url( './assets/fonts/static/HankenGrotesk-Bold.ttf' ) format( 'woff2' );
+}
+@font-face {
+    font-family: 'HankenGrotesk extraBold';
+    src: url( './assets/fonts/static/HankenGrotesk-ExtraBold.ttf' ) format( 'woff2' );
+}
+
+
+:root {
+    --light-red: hsl( 0, 100%, 67% );
+    --orangey-yellow: hsl( 39, 100%, 56% );
+    --green-teal: hsl( 166, 100%, 37% );
+    --cobalt-blue: hsl( 234, 85%, 45% );
+
+    --light-slate-blue: hsl( 252, 100%, 67% );
+    --light-royal-blue: hsl( 241, 81%, 54% );
+    --violet-blue: hsla( 256, 72%, 46%, 1 );
+    --persian-blue: hsla( 241, 72%, 46%, 0 );
+
+    --white: hsl( 0, 0%, 100% );
+    --pale-blue: hsl( 221, 100%, 96% );
+    --light-lavender: hsl( 241, 100%, 89% );
+    --dark-gray-blue: hsl( 224, 30%, 27% );
+
+    /* Weights: 500, 700, 800 */
+    --ff-hg-variable: 'HankenGrotesk variableFont';
+    --ff-hg-medium: 'HankenGrotesk medium';
+    --ff-hg-bold: 'HankenGrotesk bold';
+    --ff-hg-extrabold: 'HankenGrotesk extraBold';
+    --font-size: 1.125rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    transition: .5s ease-in-out;
+}
+body {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var( --ff-hg-variable );
+    font-size: var( --font-size );
+}
+button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+
+.result-summary-wrapper {
+    display: flex;
+
+    border-radius: 2rem;
+    box-shadow: 20px 20px 20px 0px var( --pale-blue );
+
+    margin-inline: 1rem;
+}
+
+.result-wrapper {
+    width: 50%;
+
+    padding: 3rem 2rem;
+
+    border-radius: 2rem;
+
+    background: linear-gradient( to bottom, var( --light-slate-blue ), var( --light-royal-blue ) );
+
+    text-align: center;
+}
+
+.result-subtitle {
+    color: var( --light-lavender );
+}
+
+.result-circle {
+    width: 60%;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    margin: 2.5rem auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient( to bottom, var( --violet-blue ), hsla( 241, 81%, 54%, .1 ) );
+}
+
+.result-score {
+    color: var( --white );
+
+    font-size: 5rem;
+    font-weight: 800;
+}
+
+.result-total {
+    margin-top: -5%;
+    color: hsla( 241, 100%, 89%, .5 );
+    font-weight: 800;
+}
+
+.result-title {
+    color: var( --white );
+}
+
+.result-desc {
+    width: 70%;
+    margin: 1rem auto;
+    color: hsla( 241, 100%, 89%, .8 );
+}
+
+.summary-wrapper {
+    width: 50%;
+
+    padding: 3rem 2rem;
+
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+
+    background-color: var( --white );
+}
+
+.summary-subtitle {
+    color: var( --dark-gray-blue );
+    margin-bottom: 2.5rem;
+}
+
+.stats-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+
+    background-color: aliceblue;
+    border-radius: .5rem;
+}
+
+.bg-light-red {
+    background-color: hsla( 0, 100%, 67%, .125 );
+}
+.text-light-red {
+    color: var( --light-red );
+}
+
+.bg-orangey-yellow {
+    background-color: hsla( 39, 100%, 56%, .125 );
+}
+.text-orangey-yellow {
+    color: var( --orangey-yellow );
+}
+
+.bg-green-teal {
+    background-color: hsla( 166, 100%, 37%, .125 );
+}
+.text-green-teal {
+    color: var( --green-teal );
+}
+
+.bg-cobalt-blue {
+    background-color: hsla( 241, 81%, 54%, .125 );
+}
+.text-cobalt-blue {
+    color: var( --cobalt-blue );
+}
+
+.stats-name {
+    display: flex;
+}
+
+.stats-icon {
+    margin-right: 1rem;
+}
+
+.total-score {
+    font-weight: 800;
+    color: rgb(145, 145, 145);
+}
+.current-score {
+    margin-right: .25rem;
+    color: var( --dark-gray-blue );
+}
+
+.summary-btn {
+    width: 100%;
+
+    padding: 1.25rem;
+    margin-top: 2.5rem;
+
+    border-radius: 2rem;
+
+    color: var( --white );
+    background-color: var( --dark-gray-blue );
+
+    font-weight: 800;
+}
+.summary-btn:hover {
+    background: linear-gradient( to bottom, var( --light-slate-blue ), var( --light-royal-blue ) );
+}
+
+
+.blob {
+    transform: scale(1);
+	border-radius: 50%;
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 var( --light-slate-blue );
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+
+@media only screen and ( max-width: 850px ) {
+    .result-wrapper {
+        padding: 1.5rem 1rem;
+    }
+    .result-circle {
+        margin: 1.25rem auto;
+    }
+
+    .summary-wrapper {
+        padding: 1.5rem 1rem;
+    }
+    .summary-subtitle {
+        margin-bottom: 1.25rem;
+    }    
+    .stats-wrapper {
+        padding: 1rem;
+    }
+    .summary-btn {
+        margin-top: 1.25rem;
+        padding: 1rem;
+    }    
+}
+@media only screen and ( max-width: 650px ) {
+    .result-score {
+        font-size: 3.5rem;
+    }
+    .result-desc {
+        width: 80%;
+    }    
+}
+@media only screen and ( max-width: 550px ) {
+    body {
+        align-items: baseline;
+    }
+
+    .result-summary-wrapper {
+        height: 100%;
+        margin-inline: 0;
+        flex-direction: column;
+    }
+
+    .result-wrapper {
+        width: auto;
+        padding: 1rem;
+        border-radius: 0;
+        border-bottom-right-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+    }
+
+    .result-subtitle {
+        font-size: 1.25rem;
+    }    
+
+    .result-circle {
+        width: 40%;
+    }
+    
+    .result-desc {
+        width: auto;
+        margin: .5rem auto;
+    }
+
+    .result-title {
+        font-size: 1.5rem;
+    }    
+
+    .summary-wrapper {
+        height: inherit;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 1rem;
+    }
+
+    .summary-subtitle {
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+    }
+
+    .summary-btn {
+        margin-top: .5rem;
+    }    
+}
